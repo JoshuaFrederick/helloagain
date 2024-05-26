@@ -22,7 +22,7 @@ h1, h2 {
 }
 
 header h1, header h2 {
-    color: white;
+    color: white !important;
 }
 
 p {
