@@ -21,6 +21,10 @@ h1, h2 {
     color: #333;
 }
 
+header h1, header h2 {
+    color: white;
+}
+
 p {
     line-height: 1.6;
 }
