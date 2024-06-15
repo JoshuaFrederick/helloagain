@@ -1,24 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dee7ef;
     margin: 0;
     padding: 0;
     
 }
 
 header {
-    background-color: #95c3ed;
+    background-color: #335686;
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
 section {
-    margin: 15px;
+    margin: 25px;
 }
 
 h1, h2 {
-    color: #333;
+    color: #335686;
+}
+
+h3 {
+    color: #646363
+    ;
+}
+
+section h1 {
+    font-size: 2em;
+}
+
+header h1 {
+    color:#dee7ef;
 }
 
 .centered-image {
@@ -32,10 +45,40 @@ p {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #335686;
+    color: #dee7ef;
     text-align: center;
     padding: 10px 0;
     width: 100%;
     bottom: 0;
 }
+
+footer a {
+    color: #dee7ef;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #adacae;
+  }
+  
+li.nav {
+    float: left;
+  }
+  
+li.nav a {
+    display: block;
+    color: #335686;
+    text-align: center;
+    padding: 14px 16px;s
+    text-decoration: none;
+  }
+
+  /* Change the link color to #335686 on hover */
+li.nav a:hover {
+    background-color: #335686;
+    color: #dee7ef;
+  }
