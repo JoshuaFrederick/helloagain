@@ -38,6 +38,40 @@
         
         
     </footer>
+
+    <script>
+    async function fetchWeatherData() {
+        const apiKey = '35c2b4bd-4cbe-4c49-9f8a-fbf38fb0d774'; // Replace with your actual API key
+        const stationId = 'ST-00147142'; // Replace with your station ID
+        const url = `https://api.weatherflow.com/wxengine/rest/observations/station/${ST-00147142}?token=${35c2b4bd-4cbe-4c49-9f8a-fbf38fb0d774}`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Weather data could not be retrieved');
+            }
+            const data = await response.json();
+            displayWeatherData(data);
+        } catch (error) {
+            console.error('Failed to fetch weather data:', error);
+            document.getElementById('weather-info').textContent = 'Failed to load weather data.';
+        }
+    }
+
+    function displayWeatherData(data) {
+        // Adjust based on the actual data structure
+        const temperature = data.temperature;
+        const conditions = data.conditions;
+        document.getElementById('weather-info').innerHTML = `Temperature: ${temperature}°, Conditions: ${conditions}`;
+    }
+
+    // Fetch weather data when the page loads
+    document.addEventListener('DOMContentLoaded', fetchWeatherData);
+
+    // Update weather data every 5 minutes
+    setInterval(fetchWeatherData, 30000);
+    </script>
+
 </body>
 
 </html>
